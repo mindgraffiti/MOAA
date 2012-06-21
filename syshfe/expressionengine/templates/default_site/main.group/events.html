@@ -1,0 +1,48 @@
+{embed="inc/begin_head" entry_title="Calendar of Events"}
+{embed="inc/end_head"}
+{embed="inc/sidebar"}
+{exp:channel:entries channel="home" limit="1"}
+	<h2>Calendar of Events</h2>
+	<div class="adcolumn">
+	{ads}
+	{if image_link}<a href="{image_link}">{/if}
+	{exp:ed_imageresizer image="{image}" maxWidth="169" maxHeight="93" alt="{image_title}"}<br />
+	{if image_link}</a>{/if}
+	{/ads}
+	</div>
+{/exp:channel:entries}
+
+{exp:channel:entries channel="events"}
+	<h3>{title_sale_table}</h3>
+	<table class="calendar" summary="Angus sales held in Missouri, with dates, sale name, location and websites with further information.">
+	<colgroup>
+		<col class="sale-dates" />
+		<col class="sale-events" />
+		<col class="sale-locations" />
+	</colgroup>
+	{sales_body orderby="sale_date" sort="asc"}
+		<tr>
+			<td>{sale_date format="%n/%j"}</td>
+			<td>{if sale_link != ''}<a href="{sale_link}">{sale_name}</a>{if:else}{sale_name}{/if}</td>
+			<td>{if sale_location != ''}{sale_location}{if:else}&nbsp;{/if}</td>
+		</tr>
+	{/sales_body}
+	</table>
+
+	<h3>{title_event_table}</h3>
+	<table class="calendar" summary="Angus events held in Missouri, with dates, event name, location and websites with further information.">
+	<colgroup>
+		<col class="event-dates" />
+		<col class="event-names" />
+		<col class="event-locations" />
+	</colgroup>
+	{events_body orderby="event_date" sort="asc"}
+		<tr>
+			<td>{event_date format="%n/%j"}</td>
+			<td>{if event_link != ''}<a href="{event_link}">{event_name}</a>{if:else}{event_name}{/if}</td>
+			<td>{if event_location != ''}{event_location}{if:else}&nbsp;{/if}</td>
+		</tr>
+	{/events_body}
+	</table>
+{/exp:channel:entries}
+{embed="inc/footer"}

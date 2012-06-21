@@ -1,0 +1,338 @@
+/* @override http://missouriangus.ehclients.com/-/css/main.css */
+
+/* -------------------------------------
+	Design: 
+	CSS: 
+	Built: 208-06-26
+	Last Edit: 2011-07-14 tc
+	URI: http://www.vanniceangus.com
+---------------------------------------*/
+/* @group Reset */
+/* Eric Meyer's CSS Reset, modified 
+http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, hr, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, font, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	background-color: #000;
+	color: #fffeff;
+	font: 14px Verdana, "Lucida Grande", Lucida;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+/* @end */
+/* @group Layout */
+/* An extra div if needed, not plugged into the HTML by default */
+#container{
+	display: block;
+	margin: auto;
+	width: 961px;
+}
+#header{
+	display: block;
+	height: 194px;
+}
+
+.logo a{
+	background: url(../images/design/logo.jpg) no-repeat;
+	display: block;
+	float: left;
+	width: 275px;
+	height: 194px;
+}
+
+.logo a h1{
+	visibility: hidden;
+}
+
+.rotate{
+	display: block;
+	float: left;
+}
+
+#wrapper{
+	width: 961px;
+	margin: auto;
+}
+#nav{
+	display: block;
+	width: 275px;
+	float: left;
+}
+
+#nav ul{
+	padding-bottom: 15px;
+}
+
+#nav li{
+	
+}
+
+#nav li a{
+	display: block;
+	padding: 4px 10px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+#nav li a:hover{
+	background-image: url(../images/design/over.jpg);
+	background-color: #725b17;
+	color: #ffc832;
+	text-shadow: #000 0 -1px 0;
+}
+
+#contact{
+	text-align: center;
+	margin-bottom: 14px;
+	font-size: 12px;
+}
+
+#contact a{
+	color: #ffffff;
+}
+
+#contact a:hover{
+	color: #ffca32;
+}
+
+.adcolumn{
+	float: right;
+	display: block;
+	width: 171px;
+	padding-left: 10px;
+}
+
+.adcolumn img{
+	padding-bottom: 10px;
+}
+
+#content{
+	display: block;
+	float: right;
+	width: 666px;
+	padding: 10px;
+}
+
+#content ol{
+	list-style-type: upper-alpha;
+	padding-left: 25px;
+	margin-left: 10px;
+}
+
+#footer{
+	display: block;
+	clear: both;
+}
+#api{
+	font: 10px "Lucida Grande", Lucida, Verdana, sans-serif;
+	margin-bottom: 20px;
+	color: #424242;
+	text-align: center;
+}
+
+#api a{
+	color: #424242;
+}
+
+#api a:hover{
+	color: #5e5e5e;
+}
+
+.hrsm{
+	display: block;
+	height: 12px;
+	background: url(../images/design/shortline.jpg) no-repeat;
+	margin: auto;
+}
+
+.hrlg{
+	display: block;
+	height: 12px;
+	background: url(../images/design/longline.jpg) no-repeat;
+	margin: auto;
+}
+
+ul.list_plain{
+	padding-left: 16px;
+	list-style-type: square;
+	margin-left: 10px;
+}
+
+ul.list_plain li{
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.list_plain img{
+	vertical-align: bottom;
+}
+
+
+
+/* @end */
+/* @group Typography */
+#content ul li{
+	line-height: 2.4em;
+}
+#content ul li a img{
+	vertical-align: text-bottom;
+	margin-right: 3px;
+}
+p{
+	margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6{
+	color: #f5c825;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-weight: bold;
+	margin-bottom: 10px;
+
+}
+
+h1{
+	font-size: 1.8em;
+}
+
+h2{
+	font-size: 1.5em;
+}
+
+h3{
+	font-size: 1.3em;
+}
+
+h4{
+	font-size: 1.2em;
+}
+
+/* LVHA */
+a, a:link{
+	color: #fbcd31;
+}
+a:visited{
+	color: #8e5108;
+}
+a:hover{
+	color: #fafe20;
+}
+a:active{
+	color: #f71412;
+}
+/* @end */
+
+/* @group Pretty Forms */
+
+form{
+
+}
+
+label{
+}
+
+input, textarea{
+	background-color:#f0f0f0;
+	border-width:1px;
+	border-color:#999999;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	-moz-box-shadow:inset 0px 0px 14px #a5a5a5;
+	-webkit-box-shadow:inset 0px 0px 14px #a5a5a5;
+	box-shadow:inset 0px 0px 14px #a5a5a5;
+	padding: 6px;
+	font-size: 14px;
+	color: #5e5e5e;
+}
+.submit{
+
+}
+.submit input{
+
+}
+
+fieldset{
+}
+fieldset p{
+}
+legend{
+}
+
+/* @end */
+
+/* @group misc. */
+
+.left{
+	float: left;
+	margin-right: 10px;
+}
+.right{
+	float: right;
+	margin-left: 10px;
+}
+.center{
+	margin: 0 auto;
+	text-align: center;
+}
+.clear{
+	clear: both;
+}
+/* Use this to clear items instead of the .clear */
+.group:before,.group:after {	content: "";	display: table;}.group:after {	clear: both;}.group {	zoom: 1; /* IE6&7 */}
+
+.calendar{
+	margin-bottom: .5em;
+}
+.calendar td{
+	font-size: .95em;
+}
+.calendar tr{
+	border-bottom: 1px solid #fff;
+}
+colgroup col.sale-dates,
+colgroup col.event-dates{
+	width: 50px;
+}
+colgroup col.sale-events,
+colgroup col.event-names{
+	width: 300px;
+}
+/* @end */

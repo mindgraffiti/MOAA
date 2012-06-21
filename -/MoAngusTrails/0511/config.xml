@@ -1,0 +1,29 @@
+<FlippingBook>
+	<width>600</width>
+	<height>400</height>
+
+	<scaleContent>true</scaleContent>
+	<firstPage>0</firstPage>
+	<alwaysOpened> false </alwaysOpened>
+	<autoFlip> 100 </autoFlip>
+	<flipOnClick> false </flipOnClick>
+
+	<staticShadowsDepth> 2 </staticShadowsDepth>
+	<dynamicShadowsDepth> 2 </dynamicShadowsDepth>
+
+	<moveSpeed> 2 </moveSpeed>
+	<closeSpeed> 3 </closeSpeed>
+	<gotoSpeed> 3 </gotoSpeed>
+
+	<flipSound>sounds/03.mp3</flipSound>
+	<pageBack> 0x1C90CB </pageBack>
+
+	<loadOnDemand> true </loadOnDemand>
+	<cachePages> true </cachePages>
+
+   	<cacheSize> 4 </cacheSize>
+	<preloaderType> Progress Bar </preloaderType>
+	<userPreloaderId></userPreloaderId>
+
+	<pages><page>thumbs/1.jpg?URLToOpen=full/1.jpg</page><page>thumbs/2.jpg?URLToOpen=full/2.jpg</page><page>thumbs/3.jpg?URLToOpen=full/3.jpg</page><page>thumbs/4.jpg?URLToOpen=full/4.jpg</page><page>thumbs/5.jpg?URLToOpen=full/5.jpg</page><page>thumbs/6.jpg?URLToOpen=full/6.jpg</page><page>thumbs/7.jpg?URLToOpen=full/7.jpg</page><page>thumbs/8.jpg?URLToOpen=full/8.jpg</page><page>thumbs/9.jpg?URLToOpen=full/9.jpg</page><page>thumbs/10.jpg?URLToOpen=full/10.jpg</page><page>thumbs/11.jpg?URLToOpen=full/11.jpg</page><page>thumbs/12.jpg?URLToOpen=full/12.jpg</page><page>thumbs/13.jpg?URLToOpen=full/13.jpg</page><page>thumbs/14.jpg?URLToOpen=full/14.jpg</page><page>thumbs/15.jpg?URLToOpen=full/15.jpg</page><page>thumbs/16.jpg?URLToOpen=full/16.jpg</page><page>thumbs/17.jpg?URLToOpen=full/17.jpg</page><page>thumbs/18.jpg?URLToOpen=full/18.jpg</page><page>thumbs/19.jpg?URLToOpen=full/19.jpg</page><page>thumbs/20.jpg?URLToOpen=full/20.jpg</page><page>thumbs/21.jpg?URLToOpen=full/21.jpg</page><page>thumbs/22.jpg?URLToOpen=full/22.jpg</page><page>thumbs/23.jpg?URLToOpen=full/23.jpg</page><page>thumbs/24.jpg?URLToOpen=full/24.jpg</page><page>thumbs/25.jpg?URLToOpen=full/25.jpg</page><page>thumbs/26.jpg?URLToOpen=full/26.jpg</page><page>thumbs/27.jpg?URLToOpen=full/27.jpg</page><page>thumbs/28.jpg?URLToOpen=full/28.jpg</page><page>thumbs/29.jpg?URLToOpen=full/29.jpg</page><page>thumbs/30.jpg?URLToOpen=full/30.jpg</page><page>thumbs/31.jpg?URLToOpen=full/31.jpg</page><page>thumbs/32.jpg?URLToOpen=full/32.jpg</page></pages>
+</FlippingBook>

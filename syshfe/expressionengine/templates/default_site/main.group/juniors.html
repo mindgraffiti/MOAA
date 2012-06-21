@@ -1,0 +1,16 @@
+{embed="inc/begin_head" entry_title="Juniors"}
+{embed="inc/end_head"}
+{embed="inc/sidebar"}
+{exp:channel:entries channel="juniors" limit="1"}
+{juniors_body}
+{/exp:channel:entries}
+
+{exp:channel:entries channel="applications_forms" limit="1"}
+{applications_forms_body search:application_form_name="Junior"}
+	<ul>
+	<li>{exp:link_icon link_title="{application_form_name}"}{file}{/exp:link_icon}</li>
+	</ul>
+{/applications_forms_body}
+{/exp:channel:entries}
+
+{embed="inc/footer"}

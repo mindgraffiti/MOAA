@@ -1,0 +1,17 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Worthington;Josh;;;
+FN:Missouri Angus Association
+ORG:Missouri Angus Association;
+EMAIL;type=INTERNET;type=WORK;type=pref:worthington@missouriangus.org
+TEL;type=WORK;type=pref:417-995-3000
+TEL;type=CELL:417-844-2601
+TEL;type=WORK;type=FAX:417-995-3003
+item1.ADR;type=WORK;type=pref:;;P.O. Box 246;Dadeville;MO;65635;U.S.A.
+item1.X-ABADR:us
+item2.X-ABRELATEDNAMES;type=pref:Josh Worthington
+item2.X-ABLabel:General Manager
+X-ABShowAs:COMPANY
+CATEGORIES:Temp for Vcard creation
+X-ABUID:E4FD15B7-F06B-4AF7-BF3E-D71E1A183385\:ABPerson
+END:VCARD

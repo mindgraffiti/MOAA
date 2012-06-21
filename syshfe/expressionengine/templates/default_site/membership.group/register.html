@@ -1,0 +1,147 @@
+{embed="inc/begin_head" entry_title="Register"}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="../js/jquery.maskedinput-1.3.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	jQuery(function($){
+	   $("#main_phone, #second_phone, #third_phone").mask("(999) 999-9999");
+	});
+</script>
+{embed="inc/end_head"}
+{embed="inc/limited_sidebar"}
+{embed="membership/menu"}
+{if last_segment == "success"}
+	Account created. You can <a href="{membership/login}">login</a> now. 
+{if:elseif logged_in}
+	You are already registered and logged in. <a href="{path=logout}">Logout</a> or go to your <a href="{path=membership/profile}">profile</a>.
+{if:else}
+	{exp:zoo_visitor:registration_form error_handling="inline" return='membership/register/success'}
+	
+		<h3>Membership Registration</h3>
+		<fieldset>	
+			<h4>Contact Information</h4>
+			<p><label for="farm_name">{label:farm_name}:</label> <input type="text" name="farm_name" id="farm_name" value="{farm_name}" />\
+				{error:farm_name}
+			</p>
+			<p class="left">
+				<label for="member_firstname">{label:member_firstname}:</label><br />
+				<input type="text" name="member_firstname" id="member_firstname" value="{member_firstname}" />
+				{error:member_firstname}
+			</p>
+			<p class="left"><label for="member_lastname">{label:member_lastname}:</label><br />
+				<input type="text" name="member_lastname" id="member_lastname" value="{member_lastname}" />
+				{error:member_lastname}
+			</p>
+			<p class="clear">
+				<label for="street_address">{label:street_address}:</label>
+				<input type="text" name="street_address" id="address" value="{street_address}" maxlength="23" size="25" />
+				{error:street_address}
+			</p>
+			<p class="left">
+				<label for="city">{label:city}:</label><br />
+				<input type="text" name="city" id="city" value="{if city}{city}{/if}" />,
+				{error:city} 
+			</p>
+			<p class="left">
+				<label for="state">{label:state}:</label><br />
+				<select name="state" id="state">
+				{options:state}
+					<option value="{option_value}"{selected}>{option_name}</option>
+				{/options:state}
+				</select>
+				{error:state}
+			</p>
+			<p class="left">
+				<label for="zip_code">{label:zip_code}:</label><br />
+				<input type="text" name="zip_code" id="zip_code" value="{if zip_code}{zip_code}{/if}" />
+				{error:zip_code}
+			</p>
+			<p class="clear left">
+				<label for="main_phone">{label:main_phone}:</label><br />
+				<input type="text" name="main_phone" id="main_phone" value="{main_phone}" />
+				{error:main_phone}
+			</p>
+			<p class="left">
+				<label for="second_phone">{label:second_phone}:</label><br />
+				<input type="text" name="second_phone" id="second_phone" value="{if second_phone}{second_phone}{/if}" />
+			</p>
+			<p class="clear">
+				<label for="third_phone">{label:third_phone}:</label><br />
+				<input type="text" name="third_phone" id="third_phone" value="{if third_phone}{third_phone}{/if}" />
+			</p>
+		</fieldset>
+		<br/>
+		<fieldset>
+			<h4>Membership Details</h4>
+			<p>
+				<label for="type_of_member">{label:type_of_member}:</label><br />
+				<select name="type_of_member" id="type_of_member">
+				{options:type_of_member}
+					<option value="{option_value}"{selected}>{option_name}</option>
+				{/options:type_of_member}
+				</select>
+			</p>
+			<fieldset>
+				<p>If you are a Junior member or Auxiliary member, please select "Junior Member" or "Auxiliary Member" for your title.</p>
+			<p class="left">
+			<label for="title_of_officer">{label:title_of_officer}:</label><br />
+			<select name="title_of_officer" id="title_of_officer">
+				{options:title_of_officer}
+					<option value="{option_value}"{selected}>{option_name}</option>
+				{/options:title_of_officer}
+			</select>
+			</p>
+			<p class="left">
+			<label for="title_of_junior">{label:title_of_junior}:</label><br />
+			<select name="title_of_junior" id="title_of_junior">
+				{options:title_of_junior}
+					<option value="{option_value}"{selected}>{option_name}</option>
+				{/options:title_of_junior}
+			</select>
+			</p>
+			<p class="left">
+			<label for="title_of_auxiliary">{label:title_of_auxiliary}:</label><br />
+			<select name="title_of_junior" id="title_of_junior">
+				{options:title_of_auxiliary}
+					<option value="{option_value}"{selected}>{option_name}</option>
+				{/options:title_of_auxiliary}
+			</select>
+			</p>
+			</fieldset>
+			<p class="clear">
+				<label for="username">Email*:</label>
+				<input type="text" name="email" id="email" value="{email}" />
+				 {error:email}
+			</p>
+			
+			<p>
+				<label for="password">Password*:</label>
+				<input type="password" name="password" id="password" value="{if password}{password}{/if}" />
+				{error:password}
+			</p>
+			
+			<p>
+				<label for="password_confirm">Confirm password*:</label>
+				<input type="password" name="password_confirm" id="password_confirm" value="{if password_confirm}{password_confirm}{/if}" />
+			</p>
+			
+			<p>
+				<label for="terms_of_service">Terms of service:</label><br /> 
+				<textarea name='terms' rows='4' readonly>By registering at this site you agree to report  accurate membership information. We reserve the right to remove, edit, or move any information located on this site, for any reason.</textarea>
+			</p>
+			
+			<p>
+				<label for="accept_terms">Accept terms of service?*</label>
+				<input type='checkbox' name='accept_terms' value='y' {if accept_terms == "y"}checked="checked"{/if} />
+			</p>
+			
+			{if captcha}
+			{captcha}
+			{/if}
+			</fieldset>
+			<p>
+				<input type="submit" value="Register" class="form-submit"  />
+			</p>
+			<p>* Required fields</p>
+	{/exp:zoo_visitor:registration_form}
+{/if}
+{embed="inc/footer"}

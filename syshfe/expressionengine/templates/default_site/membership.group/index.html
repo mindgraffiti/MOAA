@@ -1,0 +1,19 @@
+{embed="inc/begin_head" entry_title="Membership"}
+{embed="inc/end_head"}
+{embed="inc/limited_sidebar"}
+{embed="membership/menu"}
+<h2>Become a member</h2>
+{exp:channel:entries channel="applications_forms" limit="1"}
+{applications_forms_body search:application_form_name="membership"}
+	<ul>
+	<li>{exp:link_icon link_title="{application_form_name}"}{file}{/exp:link_icon}</li>
+	</ul>
+{/applications_forms_body}
+{/exp:channel:entries}
+<h3>Membership Search</h3>
+<p>Search by Ranch or member&rsquo;s name.</p>
+{exp:search:simple_form channel="zoo_visitor" search_in="everywhere" result_page="membership/results" status="not closed" show_expired="yes" show_future_entries="yes"}
+	<p><input type="text" name="keywords" id="keywords" value="" maxlength="100"> <input type="submit" value="Search for Members" class="submit"></p>
+{/exp:search:simple_form}
+<h4>Browse Membership</h4>
+<p><a href="{path='membership/out-of-state'}"></p>

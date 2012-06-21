@@ -1,0 +1,9 @@
+{embed="inc/begin_head" entry_title="Out of State Members"}
+{embed="inc/end_head"}
+{embed="inc/sidebar"}
+<h2>Out of State Member Listing</h2>
+	{exp:zoo_visitor:details}
+	{if district_location=="OS"}
+          {visitor:member_firstname} {visitor:member_lastname}
+	{/if}
+    	{/exp:zoo_visitor:details}

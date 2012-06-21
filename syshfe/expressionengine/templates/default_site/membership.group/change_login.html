@@ -1,0 +1,28 @@
+{embed="inc/begin_head" entry_title="Register"}
+{embed="inc/end_head"}
+{embed="inc/limited_sidebar"}
+{embed="membership/menu"}
+<h2>Account &raquo; Change login</h2>
+{if logged_in AND segment_3 == "success"}
+		<h3>Login updated</h3>
+{if:elseif logged_in}
+	{exp:zoo_visitor:update_form return="membership/change_login/success"}
+
+		<fieldset>				
+		<p>
+			<label for="EE_email" class="form-label">Your login email:</label>
+			<input type="text" name="username" id="username" class="form-text" value="{username}" />
+		</p>
+	
+		</fieldset>
+		<p>
+	         <input type="submit" value="Submit" class="button" />
+		 </p>
+		 </fieldset>
+
+	{/exp:zoo_visitor:update_form}
+
+{if:else}
+    You are not logged in.
+{/if}
+

@@ -1,0 +1,27 @@
+{embed="inc/begin_head" entry_title="Login"}
+{embed="inc/end_head"}
+{embed="inc/limited_sidebar"}
+{embed="membership/menu"}
+{if logged_in}
+	You are already registered and logged in. <a href="{path=logout}">Logout</a> or go to your <a href="{path=membership/profile}">profile</a>.
+{if:else}
+	{exp:member:login_form return="membership/profile"}
+		<p>
+			<label for="email">Email:</label>
+			<input type="text" name="username" id="username" />
+		</p>
+		<p>
+			<label for="email">Password:</label>
+			<input type="password" name="password" id="password" />
+		</p>
+		
+		{if auto_login}
+		<p>
+			<label for="email">Remember me?</label>
+			<input class='checkbox' type='checkbox' name='auto_login' value='1'  />
+		</p>
+		{/if}
+		
+		<input type="submit" name="submit" value="Log in" />
+	{/exp:member:login_form}
+{/if}

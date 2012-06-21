@@ -1,0 +1,29 @@
+{embed="inc/begin_head" entry_title="Auxiliary"}
+{embed="inc/end_head"}
+{embed="inc/sidebar"}
+
+{exp:channel:entries channel="auxiliary" limit="1"}
+{auxiliary_body}
+{/exp:channel:entries}
+<h3>Missouri Angus Auxiliary</h3>
+
+{exp:zoo_visitor:members category="5" orderby="title_of_auxiliary"}
+			<p><b>{title_of_auxiliary}</b><br />
+			{if email !=''}<a href="mailto:{email}">{member_firstname} {member_lastname}</a>{if:else}{member_firstname} {member_lastname}{/if}<br />
+			{street_address}<br />
+			{city}, {state} {zip_code}<br />
+			{main_phone}<br />
+			{if second_phone}{second_phone}<br />
+			{if:elseif third_phone}{third_phone}<br />{/if}
+			</p>
+{/exp:zoo_visitor:members}
+
+{exp:channel:entries channel="applications_forms" limit="1"}
+{applications_forms_body search:application_form_name="Auxiliary"}
+	<ul>
+	<li>{exp:link_icon link_title="{application_form_name}"}{file}{/exp:link_icon}</li>
+	</ul>
+{/applications_forms_body}
+{/exp:channel:entries}
+
+{embed="inc/footer"}

@@ -1,0 +1,73 @@
+<body>
+<div id="container">	
+	<div id="header">
+		<div class="logo">
+		<a href="{path='main'}">
+			<h1>Missouri Angus Association</h1>
+		</a>
+		</div>
+		<div class="rotate"> 
+			<script language="JavaScript">
+				<!--
+				showImage();
+				//-->
+			</script>
+		</div>
+<div class="clear"></div> 
+			</div>
+
+	<div id="wrapper">
+		<div id="nav">
+<hr class="hrsm"/>
+		<ul>
+			<li><a href="{path='main'}">Home</a></li>
+			<li><a href="{path='main/applications-forms'}">Applications &amp; Forms</a></li>
+			<li><a href="{path='main/auxiliary'}">Auxiliary</a></li>
+			<li><a href="{path='main/events'}">Calendar of Events</a></li>
+			<li><a href="{path='main/constitution'}">Constitution &amp; By Laws</a></li>
+			<li><a href="{path='main/directors'}">Directors</a></li>
+			<li><a href="{path='main/e-newsletter'}">E-News Letter</a></li>
+			<li><a href="{path='main/juniors'}">Juniors</a></li>
+			<li><a href="{path='main/links'}">Links</a></li>
+			<li><a href="{path='membership'}">Members</a></li>
+			<li><a href="{path='main/publications'}">Publications</a></li>
+			<li><a href="{path='main/regional-associations'}">Regional Associations</a></li>
+			<li><a href="{path='main/sale-coordination'}">Sale Coordination</a></li>
+			<li><a href="{path='main/sale-listings'}">Sale Listings</a></li>
+		</ul>
+<hr class="hrsm"/> 
+	<div id="contact">
+		<div class="vcard">
+			{exp:zoo_visitor:details member_entry_id="13768"}
+			<span class="fn org">{visitor:member_firstname} {visitor:member_lastname}</span> 
+				<a href="/-/misc/MissouriAngusAssociation.vcf" title="vCard">
+					<img src="/-/images/design/vcard.png" width="16" height="16" alt="vcard" />
+				</a>
+	        <div class="adr"> 
+	          <span class="street-address">{visitor:street_address}</span><br />
+				<span class="locality">{visitor:city}</span>, 
+				<span class="region">{visitor:state}</span>
+				<span class="postal-code">{visitor:zip_code}</span>
+		     </div><!--End adr -->   
+		   <span class="tel"><span class="type">Phone</span>: <span class="value">{visitor:main_phone}</span><br />
+		   <span class="type">Mobile</span>: <span class="value">{visitor:second_phone}</span><br />
+		   <span class="type">Fax</span>: <span class="value">{visitor:third_phone}</span></span><br />
+		   <span class="email">{encode="{visitor:email}"}</span>
+			{/exp:zoo_visitor:details}
+	</div><!--End vcard class-->
+<h3>Don't panic.</h3>
+{exp:zoo_visitor:details}
+{if title_of_officer}{title_of_officer}
+{visitor:member_firstname} {visitor:member_lastname}
+{/if}
+{/exp:zoo_visitor:details}
+	</div><!--End contact-->
+
+<hr class="hrsm"/>
+{exp:search:simple_form channel="not zoo_visitor" search_in="everywhere" result_page="search/results" status="not closed" show_expired="yes" show_future_entries="yes"}
+	<p><input type="text" name="keywords" id="keywords" value="" maxlength="100"> <input type="submit" value="Search" class="submit"></p>
+{/exp:search:simple_form}
+    <hr class="hrsm"/>
+	<p><a href="https://www.facebook.com/pages/Missouri-Angus-Association/128147131167"><img src="/-/images/design/find-us-facebook.png" width="100" height="30" border="0" /></a></p>
+	  </div><!--End nav-->
+		<div id="content">

@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0, target-densitydpi = device-dpi" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link href="styles/style.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript">var dir = "./files/";
+		var ua = navigator.userAgent.toLowerCase(),
+          	platform = navigator.platform.toLowerCase(),
+         	UA = ua.match(/(opera|ie|firefox|chrome|version)[\s\/:]([\w\d\.]+)?.*?(safari|version[\s\/:]([\w\d\.]+)|$)/) || [null, 'unknown', 0],
+         	mode = UA[1] == 'ie' && document.documentMode;
+
+          	var Browser = {extend: Function.prototype.extend,name: (UA[1] == 'version') ? UA[3] : UA[1],version: mode || parseFloat((UA[1] == 'opera' && UA[4]) ? UA[4] : UA[2]),
+          	Platform: {name: ua.match(/ip(?:ad|od|hone)/) ? 'ios' : (ua.match(/(?:webos|android|bada|symbian|palm|blackberry)/) || platform.match(/mac|win|linux/) || ['other'])[0]},
+          	Features: {xpath: !!(document.evaluate),air: !!(window.runtime),query: !!(document.querySelector),json: !!(window.JSON)},
+          	Plugins: {}};
+
+
+		document.addEventListener( "DOMContentLoaded", function(event){
+			var loadIOS = function(){
+				var script = document.createElement('script');
+				script.src = 'javascript/ios.js';
+				document.getElementsByTagName('head').item(0).appendChild(script);
+	 		};
+			var loadAndroid = function(){
+				var script = document.createElement('script');
+				script.src = 'javascript/android.js';
+				document.getElementsByTagName('head').item(0).appendChild(script);
+	 		};
+			if(Browser.Platform.name == 'ios'){
+				loadIOS();
+			}else if(Browser.Platform.name == 'android'){
+				loadAndroid();
+			}
+			
+		});</script>
+    <title>MoAngusTrailsAug2011</title>
+  </head>
+  <body>
+    <!--ProductVersion=2.1.6-->
+    <!--FBID=af96a9a53a2c352d4a207ecc5cc59c5e-->
+    <div id="body" class="body">
+      <div class="mainFrame" id="mainFrame" />
+    </div>
+  </body>
+</html>

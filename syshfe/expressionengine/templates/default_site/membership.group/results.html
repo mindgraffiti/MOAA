@@ -1,0 +1,16 @@
+{embed="inc/begin_head" entry_title="Membership Search Results"}
+{embed="inc/end_head"}
+{embed="inc/sidebar"}
+<h2>Membership Search Results</h2>
+<div class="group">
+{exp:search:search_results}
+	<p><b>{title}</b><br />
+	{if farm_name}{farm_name}<br />{/if}
+	{street_address}<br />
+	{city}, {state} {zip_code}<br />
+	{main_phone}<br />
+	{second_phone}<br />
+	{third_phone}</p>
+{/exp:search:search_results}
+</div>
+<br class="clear" />
